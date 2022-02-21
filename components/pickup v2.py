@@ -2,7 +2,6 @@
 
 
 
-
 print("Please enter the pickup information")
 
 #customer name
