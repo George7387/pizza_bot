@@ -3,10 +3,11 @@ pizza_names = ['Margherita','Pepperoni','Hawaiian','Cheese','Italian','Veggie','
 
 pizza_prices = [8.50, 8.50, 8.50, 8.50, 8.50, 8.50, 8.50, 13.50, 13.50, 13.50, 13.50, 13.50]
 
-number_pizzas = 12
 
-#print("How many pizzas would you like to order?")
-#num_pizza = int(input())
+def menu ():
+    number_pizza = 12
 
-for count in range (number_pizzas):
-    print("{} {} ${:.2f}" .format(count+1,pizza_names[count],pizza_prices[count])) 
+    for count in range (number_pizza):
+        print("{} {} ${:.2f}" .format(count+1,pizza_names[count],pizza_prices[count])) 
+
+menu()
