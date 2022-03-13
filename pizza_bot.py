@@ -3,6 +3,7 @@
 #Bugs - Phone number input allows letters
 #     - Name input allows numbers
 
+import sys
 import random
 from random import randint
 
@@ -160,9 +161,9 @@ def order_pizza():
 def print_order(del_pick):
     print()    
     total_cost = sum(order_cost)
-    print ("Customer Details")
+    print ("Your Details")
     if del_pick == "pickup":
-        print ("Your order is for pickup")
+        print ("Your order is for Pickup")
         print(f"Customer Name: {customer_details['name']} \nCustomer Phone: {customer_details['phone']}")
     elif del_pick == "delivery":
         print ("Your order is for delivery a $5.00 delivery charge applies")
@@ -180,18 +181,65 @@ def print_order(del_pick):
 
 
 # Ability to cancel or processed with order
+def confirm_cancel():
+    print ("Please Confirm Your Order")
+    print ("To confirm please enter 1")
+    print ("To cancel please enter 2")
+    while True:
+        try:
+            confirm = int(input ("Please enter a number ")) 
+            if confirm >= 1 and confirm <= 2:
+                if confirm == 1:
+                    print ("Order Confirmed")
+                    print ("Your order has been sent to our kitchen")
+                    print ("Your delicious pizza will be with you shortly")
+                    new_exit()
+                    break
 
+                elif confirm == 2: 
+                    print ("Your Order has been Cancelled")
+                    print ("You can restart your order or exit the BOT")
+                    new_exit()
+                    break
+
+            else:
+                print("The number must be 1 or 2")
+        except ValueError: 
+                print ("That is not a valid number")
+                print("Please enter 1 or 2")    
 
 
 
 
 # Option for new order or to exit
+def new_exit():
+    print ("Do you want to start another order or exit?")
+    print ("To start another order enter 1")
+    print ("To exit the BOT enter 2")
+    while True:
+        try:
+            confirm = int(input ("Please enter a number ")) 
+            if confirm >= 1 and confirm <= 2:
+                if confirm == 1:
+                    print ("New Order")
+                    order_list.clear()
+                    order_cost.clear()
+                    customer_details.clear()
+                    main()
+                    break
 
-
-
-
-
-
+                elif confirm == 2: 
+                    print ("Exit")
+                    order_list.clear()
+                    order_cost.clear()
+                    customer_details.clear()
+                    sys.exit()
+                    break
+            else:
+                print("The number must be 1 or 2")
+        except ValueError: 
+                print ("That is not a valid number")
+                print("Please enter 1 or 2")  
 
 
 
@@ -208,6 +256,7 @@ def main():
     menu()
     order_pizza()
     print_order(del_pick)
+    confirm_cancel()
 
 
 

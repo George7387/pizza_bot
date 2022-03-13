@@ -7,10 +7,13 @@ while True:
         if confirm >= 1 and confirm <= 2:
             if confirm == 1:
                 print ("Order Confirmed")
+                print ("Your order has been sent to our kitchen")
+                print ("Your delicious pizza will be with you shortly")
                 break
 
             elif confirm == 2: 
-                print ("Order Cancelled")
+                print ("Your Order has been Cancelled")
+                print ("You can restart your order or exit the BOT")
                 break
 
         else:
