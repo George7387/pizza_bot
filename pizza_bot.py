@@ -165,10 +165,11 @@ def print_order(del_pick):
         print ("Your order is for pickup")
         print(f"Customer Name: {customer_details['name']} \nCustomer Phone: {customer_details['phone']}")
     elif del_pick == "delivery":
-        print ("Your order is for delivery")
+        print ("Your order is for delivery a $5.00 delivery charge applies")
+        total_cost = total_cost + 5
         print(f"Customer Name: {customer_details['name']} \nCustomer Phone: {customer_details['phone']} \nCustomer Address: {customer_details['house']} {customer_details['street']} {customer_details['suburb']}")
     print()
-    print("Order Details")
+    print("Your Order Details")
     count = 0
     for item in order_list:
         print("Ordered: {}  Cost ${:.2f}".format (item, order_cost[count]))
@@ -176,7 +177,6 @@ def print_order(del_pick):
     print()
     print("Total Order Cost")
     print(f"${total_cost:.2f}")
-
 
 
 # Ability to cancel or processed with order
