@@ -34,6 +34,7 @@ def not_blank(question):
             print("This cannot be blank")
 
 
+
 def welcome():
     """
     Purpose: To generate a random name from the list and print out
