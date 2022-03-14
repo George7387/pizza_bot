@@ -3,6 +3,9 @@
 #Bugs - Phone number input allows letters
 #     - Name input allows numbers
 
+# Known Bugs
+# 14/03/22 - Final product is not printing customer details correctly 
+
 import sys
 import random
 from random import randint
@@ -229,7 +232,7 @@ def new_exit():
         sys.exit()
                    
 
-                   
+
 
 
 
