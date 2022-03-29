@@ -7,7 +7,7 @@ while True:
         if confirm >= 1 and confirm <= 2:
             if confirm == 1:
                 print ("Order Confirmed")
-                print ("Your order has been sent to our kitchen")
+                print ("Your order will be sent to our kitchen")
                 print ("Your delicious pizza will be with you shortly")
                 break
 
