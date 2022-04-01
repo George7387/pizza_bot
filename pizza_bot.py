@@ -124,7 +124,7 @@ def delivery_info():
 
 
 
-  # Pizza menu
+# Pizza menu
 def menu ():
     number_pizza = 12
     for count in range (number_pizza):
@@ -138,7 +138,7 @@ def menu ():
 def order_pizza():
     # ask for total number of pizzas for order
     num_pizzas = 0
-    low = 1
+    low = 1 
     high = 5
     menu_low = 1
     menu_high = 12
