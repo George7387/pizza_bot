@@ -248,7 +248,7 @@ def main():
     del_pick = order_type()
     menu()
     order_pizza()
-    print_order(del_pick)
+    print_order(del_pick)   
     confirm_cancel()
 
 
